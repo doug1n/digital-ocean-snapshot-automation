@@ -1,0 +1,10 @@
+version: "3.3"
+
+services:
+  app:
+    container_name: daily-snapshot
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: always
+    tty: true
