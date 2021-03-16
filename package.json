@@ -1,7 +1,22 @@
 {
+  "name": "daily-snapshot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/doug1n/digital-ocean-snapshot-automation.git",
+  "author": "Douglas Gomes <douglasvieira17@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "babel-node ./script.js"
+  },
   "dependencies": {
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.10"
   }
 }

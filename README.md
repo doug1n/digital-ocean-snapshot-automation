@@ -4,7 +4,7 @@
 
 ###### Usage
 * Copy .env.example file to .env and edit with your digital ocean droplet id and api token
-* Run docker-compose up -d
+* Run docker-compose up -d --build
 
 ###### Inspiration:
 https://github.com/ishan3350/DigitalOceanSnapshotHourlyAutomation

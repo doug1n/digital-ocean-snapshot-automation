@@ -1,1 +1,1 @@
-0 */12 * * * /usr/local/bin/node /app/script.js >> /var/log/cron.log 2>&1
+* * * * * /usr/local/bin/npm --prefix /app run start >> /var/log/cron.log 2>&1

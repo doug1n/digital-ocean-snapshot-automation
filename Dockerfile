@@ -15,4 +15,6 @@ RUN chmod +x /etc/cron.d/script-cron
 RUN crontab /etc/cron.d/script-cron
 RUN touch /var/log/cron.log
 
+RUN ln -s $(which nodejs) /usr/bin/node
+
 CMD cron && tail -f /var/log/cron.log

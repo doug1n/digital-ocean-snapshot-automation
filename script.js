@@ -1,6 +1,8 @@
-require("dotenv").config();
-var axios = require("axios");
-var moment = require("moment");
+import axios from "axios";
+import moment from "moment";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const DROPLET_ID = process.env.DROPLET_ID;
 const API_TOKEN = process.env.API_TOKEN;
@@ -22,7 +24,7 @@ const MAX_SNAPSHOTS = process.env.MAX_SNAPSHOTS;
       config
     );
 
-    return response.data.snapshots;
+    return response?.data?.snapshots;
   };
 
   const createSnapshot = async () => {
@@ -35,7 +37,7 @@ const MAX_SNAPSHOTS = process.env.MAX_SNAPSHOTS;
 
     console.log(`Created snapshot ${name}.`);
 
-    return response.data;
+    return response?.data;
   };
 
   const deleteSnapshot = async snapshotId => {
@@ -43,12 +45,12 @@ const MAX_SNAPSHOTS = process.env.MAX_SNAPSHOTS;
 
     console.log(`Deleted snapshot ${snapshotId}.`);
 
-    return response.data;
+    return response?.data;
   };
 
   const snapshots = await getSnapshots();
 
-  if (snapshots.length) {
+  if (snapshots?.length) {
     const now = moment().utc();
     const firstSnapshot = snapshots[0];
     const lastSnapshot = snapshots[snapshots.length - 1];
