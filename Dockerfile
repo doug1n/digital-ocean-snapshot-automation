@@ -6,7 +6,7 @@ RUN mkdir /app
 
 WORKDIR /app
 
-ADD * /app
+ADD . /app
 ADD crontab /etc/cron.d/script-cron
 
 RUN yarn
